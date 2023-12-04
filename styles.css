@@ -1,4 +1,4 @@
-/* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
+ /* W3.CSS 4.15 December 2020 by Jan Egil and Borge Refsnes */
 html{box-sizing:border-box}*,*:before,*:after{box-sizing:inherit}
 /* Extract from normalize.css by Nicolas Gallagher and Jonathan Neal git.io/normalize */
 html{-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}
@@ -166,6 +166,8 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 .w3-transparent,.w3-hover-none:hover{background-color:transparent!important}
 .w3-hover-none:hover{box-shadow:none!important}
 /* Colors */
+.w3-image-titleback,.w3-hover-blue:hover{color:#fff!important;background-color: #b0bec5!important}
+
 .w3-amber,.w3-hover-amber:hover{color:#000!important;background-color:#ffc107!important}
 .w3-aqua,.w3-hover-aqua:hover{color:#000!important;background-color:#00ffff!important}
 .w3-blue,.w3-hover-blue:hover{color:#fff!important;background-color:#2196F3!important}
@@ -350,4 +352,223 @@ hr{border:0;border-top:1px solid #eee;margin:20px 0}
 
 .header-pic::before {
     content: none;
+}
+
+.project-description {
+    margin-left: 20px; /* Adjust as needed */
+    padding: 16px;
+}
+
+
+.project-row {
+    display: flex;
+    align-items: flex-end; /* Aligns children at the bottom */
+    margin-bottom: 30px; /* Adds space between rows */
+}
+
+@media screen and (max-width: 600px) {
+    .project-row {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .project-description {
+        margin-left: 0;
+        margin-top: 15px;
+    }
+}
+
+/* for sub description of the project */
+.line-content {
+    color: #607d8b; /* blue-grey color */
+    font-family: Arial, sans-serif; /* or any other font-family of your choice */
+    font-size: 13px;
+}
+
+.line-content .number {
+    font-weight: bold;
+}
+
+.line-content .text {
+    font-weight: normal;
+}
+
+.playground-item img:hover {
+    opacity: 0.8;
+}
+
+.playground-item img {
+    width: 100%; /* ensures the image is responsive */
+    max-width: 400px; /* adjust this value as needed */
+    margin-top: 0; /* ensures the image is at the top */
+    display: block;
+    transition: 0.3s;
+}
+
+/* Adjust the margin-top for larger screens */
+@media screen and (min-width: 992px) { /* for large screens */
+    .playground-item img {
+        margin-top: -25px; /* pulls the image closer to the top; adjust as needed */
+    }
+}
+
+/* Custom class for five items per row with increased padding */
+.w3-col.l1-5 { 
+    width: calc(25% - 16px); /* 100% divided by 5 minus padding */
+    margin: 8px; /* Increased space between columns */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.playground-item img {
+    width: 100%; /* Responsive image width */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure it takes up the whole block */
+    margin-bottom: 16px; /* Space between image and description */
+}
+
+.playground-description {
+    text-align: center; /* Center-align the text */
+    margin-bottom: 4px; /* Space after the description for spacing to next row */
+}
+
+.playground-additional-description {
+    text-align: center; /* Center-align the additional text */
+    padding: 4px 0; /* Padding at the top and bottom for the additional description */
+    font-size: 0.9em; /* Smaller font size if preferred */
+    color:#607d8b; /* Lighter text color if needed */
+    max-width: 90%; /* Ensuring the text does not span the full width */
+    margin: 0 auto; /* Center the text block */
+    margin-bottom: 60px;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 650px) {
+    .w3-col.l1-5, .w3-col.s3 {
+        width: 100%; /* Stack items vertically on small screens */
+        margin: 8px 0; /* Increased space between stacked items */
+    }
+    .playground .w3-row-padding {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
+
+/* About */
+/* CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and default styles */
+about-body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    line-height: 1.6;
+    padding: 20px; /* Adds padding around the entire content of the body */
+}
+
+/* Main container */
+.about2-container {
+    max-width: 1200px; /* Or any max-width that fits your design */
+    margin: auto; /* This will center your container */
+    display: flex; /* Enables flexbox layout */
+    align-items: center; /* Centers children vertically */
+    justify-content: center; /* Centers children horizontally in the container */
+    padding: 20px; /* Adds padding inside the container */
+    gap: 10px; /* Adds space between flex items */
+    margin-top: 150px;
+}
+
+/* Profile image */
+.profile-img {
+    width: 400px; /* Adjust as needed */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 0%;
+    margin-right: 10px; /* Adjust space between image and text */
+}
+
+/* Text section */
+.text-section {
+    flex: 1; /* Takes up remaining space */
+    margin-left: 20px;
+    max-width: 55%;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Stack image and text on top of each other */
+        align-items: center;
+    }
+
+    .profile-img {
+        width: 150px; /* Smaller image for smaller screens */
+        margin-bottom: 20px; /* Space between image and text */
+        margin-right: 0; /* Reset right margin */
+    }
+
+    .text-section {
+        /* Adjust text section styling for smaller screens if necessary */
+    }
+}
+
+.about-sub-description {
+    margin-top: -10px;
+    text-align: left;
+    font-size: 0.9em; /* Smaller font size if preferred */
+    color:#607d8b; /* Lighter text color if needed */
+    margin-bottom: 50px;
+}
+
+.contact-padding {
+    margin-top: -10px;
+    text-align: left;
+    font-size: 0.9em; /* Smaller font size if preferred */
+    color:#607d8b; /* Lighter text color if needed */
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.about-description {
+    text-align: left;
+    font-size: 1em;
+    color:black; /* Lighter text color if needed */;
+    padding-top: 5px;
+}
+
+.about-spaced-description {
+    text-align: left;
+    font-size: 1em;
+    color:black; /* Lighter text color if needed */;
+    margin-top: 50px;
+
+}
+
+.about-me-big {
+    text-align: left;
+    font-size: 1.5em;
+    color:black; /* Lighter text color if needed */;
+    padding-top: 5px;
+}
+
+.about-bottomspaced-description {
+    text-align: left;
+    font-size: 1em;
+    color:black; /* Lighter text color if needed */;
+    padding-top: 5px;
+    margin-bottom: 50px;
+
+}
+
+.work-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px; /* Adjust the gap between columns */
+}
+
+.column {
+  flex: 1; /* Each column takes up equal width */
+  /* Optional padding for column content */
+  padding: 0 20px;
 }
